@@ -58,4 +58,10 @@ Route::get('/Calculo', function () {
     return view('Calculo.index');
 });
 
-Route::post('/Calculo', [CalculaIMCController::class,'store'])->name('Calculo');
+//Route::post('/Calculo', [CalculaIMCController::class,'store'])->name('Calculo');
+
+// Ruta para procesar el cálculo de IMC y mostrar el menú de dieta
+//Route::post('/calculo', [CalculaIMCController::class, 'store']);
+
+Route::get('/calculo', [CalculaIMCController::class, 'index'])->name('Calculo');
+Route::post('/calculo', [CalculaIMCController::class, 'store'])->name('calculo.store');
