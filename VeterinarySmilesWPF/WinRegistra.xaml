@@ -1,0 +1,167 @@
+﻿<Window x:Class="VeterinarySmilesWPF.WinRegistra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeterinarySmilesWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="WinRegistra" Height="699" Width="1225" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#E1ECFF" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel x:Name="degradado">
+
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF51B9CF" Offset="0.523"/>
+                    <GradientStop Color="#FF37C5FF" Offset="0.331"/>
+                    <GradientStop Color="#FF166C7E" Offset="0.694"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
+            <Grid Background="Transparent">
+                <Button x:Name="btnExit" Height="40" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Padding="0" Margin="0" Click="btnExit_Click" >
+
+                    <materialDesign:PackIcon Kind="Close" Width="40" Height="40" />
+                </Button>
+            </Grid>
+
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="500" HorizontalAlignment="Center">
+                <materialDesign:PackIcon Kind="UserTick" Width="50" Height="60"/>
+                <Label Content="REGISTRO Y MODIFICACION DE USUARIO" FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="15" FontSize="20" Foreground="black"/>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <materialDesign:PackIcon Kind="UserCardDetails" Width="25" Height="25"/>
+                <Label Content="CI : " FontWeight="Bold"/>
+                <TextBox x:Name="txtCi" Width="250" MaxLength="12" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Nombre : " FontWeight="Bold"/>
+                <TextBox x:Name="txtName" MaxLength="60" Width="227" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Primer Apellido : " FontWeight="Bold"/>
+                <TextBox x:Name="txtPrimerApellido" MaxLength="60" Width="220" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Segundo Apellido : " FontWeight="Bold"/>
+                <TextBox x:Name="txtSegundoApellido" MaxLength="60" Width="220" AllowDrop="True" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="230" HorizontalAlignment="Left">
+                <Label Content="Rol : " FontWeight="Bold"/>
+                <ComboBox Height="30" Name="cbRol" Width="120" Margin="20,0,0,0" IsEnabled="False">
+                    <ComboBoxItem Content="Administrador"/>
+                    <ComboBoxItem Content="Veterinario"/>
+                    <ComboBoxItem Content="Cajero"/>
+                </ComboBox>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Fecha de Nacimiento : " Height="44" FontWeight="Bold"/>
+                <DatePicker x:Name="dpBirthDate" Height="59" Width="136" Margin="20 0 0 0 " IsEnabled="False"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="230" HorizontalAlignment="Left">
+                <Label Content="Genero : " FontWeight="Bold"/>
+                <ComboBox Height="20" Name="cbGenero" Width="120" Margin="20,0,0,0" IsEnabled="False">
+                    <ComboBoxItem Content="F"/>
+                    <ComboBoxItem Content="M"/>
+                </ComboBox>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <materialDesign:PackIcon Kind="PhonePlus" Width="25" Height="25"/>
+                <Label Content="Telefono : " FontWeight="Bold"/>
+                <TextBox x:Name="txtTelefono" Width="200" Margin="10 0 0 0" MaxLength="25" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Direccion : " FontWeight="Bold"/>
+                <TextBox x:Name="txtDireccion" Width="200" MaxLength ="50" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left">
+                <Label Content="Email : " FontWeight="Bold"/>
+                <TextBox x:Name="txtEmail" Width="200" MaxLength="60" IsEnabled="False"/>
+            </StackPanel>
+
+            <StackPanel x:Name="spUserName"  Orientation="Horizontal" Margin="5" Width="300" HorizontalAlignment="Left" >
+                <Label x:Name="lblUserName" Content="UserName : " FontWeight="Bold" IsEnabled="False" Visibility="Hidden"/>
+                <TextBox x:Name="txtUserName" Width="200" MaxLength="25" IsEnabled="False" Visibility="Hidden"/>
+            </StackPanel>
+
+
+
+
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                    <Button x:Name="btnRegister" HorizontalAlignment="Left" Margin="110,0,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="101" Click="btnRegister_Click" Height="60">
+                        <Image Height="50" Width="70" Source="./utils/images/OIP.jpg"/>
+                    </Button>
+                    <Label x:Name="lblError" Content="" Width="551" Height="109" Foreground="#690404"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0" Width="750">
+
+                    <Button x:Name="btnSave" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="92" Click="btnSave_Click" Height="60">
+                        <Image Height="50" Width="70" Source="./utils/images/save.png"/>
+                    </Button>
+                    <Button x:Name="btnCancel" HorizontalAlignment="Right" Margin="100,0,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="82" Click="btnCancel_Click" Height="60">
+                        <Image Height="50" Width="70" Source="./utils/images/cancelar.png"/>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+
+
+
+
+
+
+            <Button x:Name="btnVuelveLogin" Content="Volver Inicio" HorizontalAlignment="Right" Height="20" Background="Transparent" BorderBrush="Transparent" Foreground="#690404" Padding="0" Margin="0,0,5,0" Click="btnVuelveLogin_Click"/>
+
+
+
+
+        </StackPanel>
+
+        <DataGrid x:Name="dgVista" Margin="342,123,30,167" Background="#487289" CanUserAddRows="False" IsReadOnly="True" SelectionChanged="dgVista_SelectionChanged">
+
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DockPanel>
+
+                                <Button x:Name="btnDeleteDg" Content="Eliminar" Click="btnDelete_Click" Background="red"/>
+                                <Button x:Name="btnUpdateDg" Content="Modidicar" Click="btnUpdate_Click" Background="Green"/>
+                            </DockPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+</Window>

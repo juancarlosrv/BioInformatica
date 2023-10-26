@@ -1,0 +1,59 @@
+﻿<Window x:Class="VeterinarySmilesWPF.WinLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeterinarySmilesWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="WinLogin" Height="450" Width="448" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#E1ECFF">
+    <Grid>
+        <StackPanel>
+
+            <Grid Background="#ADC4EB">
+                <Button x:Name="btnExit" Height="30" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Padding="0" Margin="0" Click="btnExit_Click" >
+
+                    <materialDesign:PackIcon Kind="Close" Width="30" Height="30" />
+                </Button>
+            </Grid>
+
+            <Label Content="LOGIN" FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="15" FontSize="20"/>
+
+            <Image HorizontalAlignment="Center" Height="151" Width="160" Source=".\utils\images\ll.png" Margin="0,0,0,0"/>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left" >
+                <Label>
+                    <materialDesign:PackIcon Kind="Users" />
+                </Label>
+                <Label Content="User : " FontWeight="Bold" FontSize="14"/>
+                <TextBox x:Name="txtLogin" Width="200" Margin="35 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left">
+                <Label>
+                    <materialDesign:PackIcon Kind="ForgotPassword" />
+                </Label>
+                <Label Content="Password : " FontWeight="Bold" FontSize="14"/>
+                <PasswordBox x:Name="txtPassword" Width="200" Margin="10 0 0 0" KeyDown="txtPassword_KeyDown"/>
+            </StackPanel>
+
+            <Grid >
+                <Button x:Name="btnRecuperaContra" Content="Olvido su Contraseña" Height="20" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="red" Padding="0" Margin="0,10,5,0" Click="btnRecuperaContra_Click" Cursor="Hand"/>
+            </Grid>
+            <Grid >
+                <Button x:Name="btnRegistra" Content="Registrarse" Width="130" Height="20" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="red" Padding="0" Margin="0,5,38,0" Visibility="Hidden" Click="btnRegistra_Click"/>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="0" HorizontalAlignment="center" Height="44">
+                <Button x:Name="btnLogin" Content="Login" Background="#ADC4EB" Width="50" BorderBrush="Transparent" Foreground="#344869" Padding="0" Margin="0" Click="btnLogin_Click" KeyDown="btnLogin_KeyDown" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

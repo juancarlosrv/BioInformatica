@@ -1,0 +1,77 @@
+﻿<Window x:Class="VeterinarySmilesWPF.WinCambioContra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeterinarySmilesWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="WinCambioContra" Height="517" Width="448" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#E1ECFF">
+    <Grid>
+        <StackPanel>
+
+            <Grid Background="#ADC4EB">
+                <Button x:Name="btnExit" Height="30" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Padding="0" Margin="0" Cursor="Hand" Click="btnExit_Click">
+                    <materialDesign:PackIcon Kind="Close" Width="30" Height="30" />
+                </Button>
+            </Grid>
+
+            <Label Content="Cambio de Contraseña" FontWeight="ExtraBold" HorizontalAlignment="Center" Margin="15" FontSize="20"/>
+
+            <Grid>
+                <materialDesign:PackIcon Kind="PasswordReset" Width="150" Height="150" HorizontalAlignment="Center"/>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left" >
+                <Label>
+                    <materialDesign:PackIcon Kind="Users" />
+                </Label>
+                <Label Content="User : " FontWeight="Bold" FontSize="14"/>
+                <TextBox x:Name="txtLogin" Width="200" Margin="35 0 0 0" MaxLength ="25"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left">
+                <Label>
+                    <materialDesign:PackIcon Kind="ForgotPassword" />
+                </Label>
+                <Label Content="Password : " FontWeight="Bold" FontSize="14"/>
+                <PasswordBox x:Name="txtPasswordAntiguo" Width="200" MaxLength="35" Margin="10 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left">
+                <Label>
+                    <materialDesign:PackIcon Kind="ForgotPassword" />
+                </Label>
+                <Label Content="Nuevo Password : " FontWeight="Bold" FontSize="14"/>
+                <PasswordBox x:Name="txtNuevoPassword" Width="200" MaxLength="35" Margin="10 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="30,10,100,10" Width="300" HorizontalAlignment="Left">
+                <Label>
+                    <materialDesign:PackIcon Kind="ForgotPassword" />
+                </Label>
+                <Label Content="Repetir Password : " FontWeight="Bold" FontSize="14"/>
+                <PasswordBox x:Name="txtRepetirPassword" MaxLength="35" Width="200" Margin="10 0 0 0"/>
+            </StackPanel>
+
+
+
+                <Button x:Name="btnRegistra" Content="Registrarse" HorizontalAlignment="Right" Height="20"  Background="Transparent" BorderBrush="Transparent" Foreground="red" Padding="0" Margin="0,0,5,0" Click="btnRegistra_Click"/>
+                <Button x:Name="btnVuelveLogin" Content="Volver Inicio" HorizontalAlignment="Right" Height="20" Background="Transparent" BorderBrush="Transparent" Foreground="red" Padding="0" Margin="0,0,5,0" Click="btnVuelveLogin_Click"/>
+                <Button x:Name="btnCambioContra" Content="Cambio Contraseña" HorizontalAlignment="Center" Background="#ADC4EB" Width="140" BorderBrush="Transparent" Foreground="#344869" Padding="0" Margin="0,0,0,0" Click="btnCambioContra_Click" Cursor="Hand" />
+                
+            
+
+            <StackPanel Orientation="Horizontal" Width="448" Margin="0" Height="44">
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
