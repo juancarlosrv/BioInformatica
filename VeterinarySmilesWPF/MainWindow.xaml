@@ -1,0 +1,109 @@
+﻿<Window x:Class="VeterinarySmilesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VeterinarySmilesWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+        Title="Menu" Height="456" Width="779"  WindowStyle="None" Loaded="Window_Loaded">
+
+
+    <Grid Margin="335,0,0,1">
+
+
+
+
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="DarkCyan" Offset="0.854"/>
+                <GradientStop Offset="1.4"/>
+                <GradientStop Color="#FF34E2B6" Offset="0.91"/>
+
+
+            </RadialGradientBrush>
+        </Grid.Background>
+
+
+
+
+        <Button x:Name="btnPet" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="101" Click="btnPet_Click" Height="61">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="Pets" Height="76" Width="108" HorizontalAlignment="Center" Background="Transparent" VerticalAlignment="Center" />
+
+            </Button.Content>
+        </Button>
+
+        <Button x:Name="btnClient" HorizontalAlignment="Left" Margin="298,163,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="112" Height="72" Click="btnClient_Click">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="Account" Height="72" Width="95" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Center" HorizontalAlignment="Center" >
+
+                </materialDesign:PackIcon>
+            </Button.Content>
+        </Button>
+        <Button x:Name="btnConsultation" HorizontalAlignment="Left" Margin="43,168,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="104" Height="72" Click="btnConsultation_Click">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="Doctor" Height="63" Width="77" />
+            </Button.Content>
+        </Button>
+        <Button x:Name="btnMedicalAppointment" HorizontalAlignment="Left" Margin="122,295,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="98" Height="80" Click="btnMedicalAppointment_Click">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="FileDocumentOutline" Height="72" Width="86" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.506,0.695" />
+            </Button.Content>
+        </Button>
+
+        <Button x:Name="btnRegistra" HorizontalAlignment="Left" Margin="171,168,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="106" Height="80" Click="btnRegistra_Click" >
+            <Button.Content>
+                <materialDesign:PackIcon Kind="UserSupervisorCircle" Height="70" Width="86" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                
+            </Button.Content>
+        </Button>
+
+        <Button x:Name="btnVaccine" HorizontalAlignment="Left" Margin="272,277,0,0" VerticalAlignment="Top" Background="Transparent" Padding="0" BorderBrush="Transparent" Cursor="Hand" Width="106" Height="80" Click="btnVaccine_Click">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="Injection" Height="70" Width="84" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button.Content>
+
+        </Button>
+
+
+        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="133" Source="./utils/images/pg.jpg" Margin="-140,168,0,0"/>
+        <Image HorizontalAlignment="Left" Height="336" Margin="-473,139,0,0" VerticalAlignment="Top" Width="446" Source="./utils/images/PetSmile.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF3FB2D8" Offset="1"/>
+                    <GradientStop Color="#FF4F727D" Offset="0"/>
+                </LinearGradientBrush>
+            </Image.OpacityMask>
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.901"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="lblInfo" Content="Label" HorizontalAlignment="Left" Margin="31,10,0,0" VerticalAlignment="Top" Width="400"/>
+
+        <Button x:Name="btnExit" Height="30" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Padding="0" Margin="0,0,10,413" Click="btnExit_Click">
+            <materialDesign:PackIcon Kind="Close" Width="30" Height="30" />
+        </Button>
+
+
+        <Grid Margin="272,421,0,17" >
+            <Button x:Name="btnRecuperaContra" Content="Cambia Contraseña" Height="20" HorizontalAlignment="Right" Background="Transparent" BorderBrush="Transparent" Foreground="red" Padding="0" Margin="0,0,10,0" Click="btnRecuperaContra_Click" Cursor="Hand"/>
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>
